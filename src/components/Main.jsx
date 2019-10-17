@@ -1,24 +1,15 @@
 import React from 'react'
-import { Button, Text, Icon, Container, Content } from 'native-base'
 import PropTypes from 'prop-types'
 import { StyleSheet } from 'react-native'
-import {
-  heightPercentageToDP as hp,
-  widthPercentageToDP as wp,
-} from 'react-native-responsive-screen'
+import { Button, Text, Icon, Container, Content } from 'native-base'
+import { heightPercentageToDP as hp, widthPercentageToDP as wp } from 'react-native-responsive-screen'
 
 const Main = ({ navigation: { navigate } }) => (
   <Container style={styles.container}>
     <Content scrollEnabled={false} contentContainerStyle={styles.content}>
       <Text style={styles.topText}>QR SCANNER</Text>
       <Icon type="FontAwesome" name="qrcode" style={styles.bigIcon} />
-      <Button
-        success
-        style={styles.btn}
-        onPress={() => {
-          navigate('Scanner')
-        }}
-      >
+      <Button success style={styles.btn} onPress={() => navigate('Scanner')}>
         <Icon type="FontAwesome" name="qrcode" style={styles.smallIcon} />
         <Text style={styles.btnText}>СКАНИРОВАТЬ QR</Text>
       </Button>

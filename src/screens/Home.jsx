@@ -5,7 +5,9 @@ import Main from '../components/Main'
 const Home = ({ navigation }) => <Main navigation={navigation} />
 
 Home.propTypes = {
-  navigation: PropTypes.any.isRequired,
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func,
+  }).isRequired,
 }
 
 export default Home

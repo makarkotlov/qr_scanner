@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-wrap-multilines */
 import React from 'react'
-import { Container, Content } from 'native-base'
 import PropTypes from 'prop-types'
+import { Container, Content } from 'native-base'
 import Scanner from '../components/Scanner'
 
 const ScannerScreen = ({ navigation }) => (
@@ -13,7 +13,9 @@ const ScannerScreen = ({ navigation }) => (
 )
 
 ScannerScreen.propTypes = {
-  navigation: PropTypes.object.isRequired,
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func,
+  }).isRequired,
 }
 
 export default ScannerScreen

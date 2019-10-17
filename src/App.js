@@ -1,8 +1,8 @@
 import { createAppContainer } from 'react-navigation'
 import { createStackNavigator } from 'react-navigation-stack'
-import Scanner from './screens/Scanner'
 import Home from './screens/Home'
 import Resume from './screens/Resume'
+import Scanner from './screens/Scanner'
 
 const AppNavigator = createStackNavigator(
   {

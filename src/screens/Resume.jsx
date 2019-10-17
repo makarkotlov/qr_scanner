@@ -5,7 +5,9 @@ import Resume from '../components/Resume'
 const ResumeScreen = ({ navigation }) => <Resume navigation={navigation} />
 
 ResumeScreen.propTypes = {
-  navigation: PropTypes.any.isRequired,
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func,
+  }).isRequired,
 }
 
 export default ResumeScreen
